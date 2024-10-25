@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tiendita Sanrio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body class="bg-pink-50 text-gray-800">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <img src="img/sanrio.png" id="logo" class="w-32">
+            <div class="relative">
+                <img src="img/cart.png" id="img-carrito" class="w-8 cursor-pointer">
+                <div id="carrito" class="hidden absolute right-0 mt-2 bg-white border rounded-lg shadow-lg p-4 w-72">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b">
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <button id="vaciar-carrito" class="mt-4 w-full bg-red-500 text-white py-2 rounded-md">Vaciar Carrito</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero con Imagen de Fondo -->
+    <div id="hero" class="h-96 bg-cover bg-center relative" style="background-image: url('img/ssas.jpeg');">
+        <div class="bg-black bg-opacity-40 absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-4xl text-white font-bold mb-4">Bienvenido a Tiendita Sanrio ♥</h1>
+                <form action="#" id="busqueda" method="post" class="w-full max-w-lg mx-auto">
+                    <input type="text" placeholder="¿Qué te gustaría comprar ♥?" id="buscador" 
+                           class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-pink-300">
+                    <button type="submit" id="submit-buscador" 
+                            class="mt-2 w-full bg-pink-300 hover:bg-pink-400 text-white py-2 rounded-md">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-pink-300 py-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="text-lg font-semibold">📦 Envíos a todo Argentina ♥</div>
+            <div class="text-lg font-semibold">🌍 Productos importados ♥</div>
+            <div class="text-lg font-semibold">🎀 Sanrio products ♥</div>
+        </div>
+    </div>
+
+    <div id="lista-cursos" class="container mx-auto py-12">
+        <h1 class="text-3xl font-bold text-center mb-8">Productos Sanrio ♥</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Tarjetas de Producto -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/sis.png" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Set cubiertos Sanrio</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$15000 <span class="line-through ml-2 text-gray-500">$11000</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="1">Agregar Al Carrito</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/pop.png" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Organizador colgante</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$11000 <span class="line-through ml-2 text-gray-500">$9000</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="2">Agregar Al Carrito</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/moc.jpg" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Mochila My Melody</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$60000 <span class="line-through ml-2 text-gray-500">$55000</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="3">Agregar Al Carrito</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/dso.png" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Funda de Hello Kitty</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$20000 <span class="line-through ml-2 text-gray-500">$16500</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="4">Agregar Al Carrito</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/pom.png" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Pantuflas Pompompurin</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$45000 <span class="line-through ml-2 text-gray-500">$38000</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="5">Agregar Al Carrito</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/esp.jpg" class="w-full">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Espejo Hello Kitty</h4>
+                    <p class="text-gray-600">Sanrio</p>
+                    <img src="img/estrellas.png" class="w-20 my-2">
+                    <p class="text-lg font-semibold">$100000 <span class="line-through ml-2 text-gray-500">$90000</span></p>
+                    <button class="mt-4 w-full bg-pink-300 text-white py-2 rounded-md agregar-carrito" data-id="6">Agregar Al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-pink-300 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <nav class="space-y-2">
+                <a href="#" class="block">Para tu Negocio</a>
+                <a href="#" class="block">Conviértete en Instructor</a>
+                <a href="#" class="block">Aplicaciones Móviles</a>
+                <a href="#" class="block">Soporte</a>
+                <a href="#" class="block">Temas</a>
+            </nav>
+            <nav class="space-y-2">
+                <a href="#" class="block">¿Quiénes Somos?</a>
+                <a href="#" class="block">Empleo</a>
+                <a href="#" class="block">Blog</a>
+            </nav>
+        </div>
+    </footer
